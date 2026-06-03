@@ -30,11 +30,30 @@ Height Height::operator+(Height rhs) {
 	return ht;
 }
 
+bool operator==(const Height& lhs, const Height& rhs) {
+	bool sameFoot, same Inch;
+	sameFoot = lhs.getFoot() == rhs.getFoot();
+	sameInch = lhs.getInch() == rhs.getinch();
+
+	bool r = sameFoot && sameInch;
+	return r;
+}
+
 int main() {
 	Height ht1(10, 5);
 	Height ht2(12, 3);
+	Height ht3(12, 3);
+	
 	Height sumHt = ht1 + ht2;
 	sumHt.print();
+
+	if (ht1 == ht2) {
+		cout << "Ht1 and Ht2 objects are the same" << endl;
+	} else if (ht1 == ht3) {
+		cout << "Ht1 and Ht3 objects are the same" << endl;
+	} else if (ht2 == ht3) {
+		cout << "Ht2 and Ht3 objects are the same" << endl;
+	}
 
 	return 0;
 }
