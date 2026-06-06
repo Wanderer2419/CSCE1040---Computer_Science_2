@@ -49,7 +49,7 @@ int main() {
 				if (numStudents == 0) {
 					cout << "Empty list of students." << endl;
 				} else {
-					idSearch(studentArr, numStudents);
+					idSearch(studentsArr, numStudents);
 				}
 				break;
 			
