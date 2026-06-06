@@ -21,7 +21,7 @@ int main() {
 	
 	while (!endLoop) {
 		char choice;
-		cout << endl;
+		cout << endl << endl;
 		cout << "*********************** Menu **************************" << endl;
 		cout << "| 1. Display list of students' information		|" << endl;
 		cout << "| 2. Add student information				|" << endl;
