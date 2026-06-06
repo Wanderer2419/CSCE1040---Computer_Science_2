@@ -132,7 +132,7 @@ int main() {
 				if (numStudents == 0) {
 					cout << "Empty list of students." << endl;
 				} else {
-					int minMean;
+					float minMean;
 					minMean = studentsArr[0].mean;
 				
 					for (int i = 1; i < numStudents; i++) {
@@ -148,7 +148,7 @@ int main() {
 				if (numStudents == 0) {
 					cout << "Empty list of students." << endl;
 				} else {
-					int maxMean;
+					float maxMean;
 					maxMean = studentsArr[0].mean;
 					
 					for (int i = 1; i < numStudents; i++) {
