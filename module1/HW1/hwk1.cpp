@@ -7,8 +7,8 @@ using namespace std;
 
 int main() {
 	cout << "+----------------------------------------------+" << endl;
-	cout << "| Computer Science and Engineering				|" << endl;
-	cout << "| CSCE 1040 - Computer Science II				|" << endl;
+	cout << "| Computer Science and Engineering		|" << endl;
+	cout << "| CSCE 1040 - Computer Science II		|" << endl;
 	cout << "| Aiden Does	ad1763	aidendoes@my.unt.edu 	|" << endl;
 	cout << "+----------------------------------------------+" << endl;
 
@@ -22,15 +22,15 @@ int main() {
 	while (!endLoop) {
 		char choice;
 		cout << endl;
-		cout << "*********************** Menu **********************" << endl;
-		cout << "| 1. Display list of students' information			|" << endl;
-		cout << "| 2. Add student information						|" << endl;
-		cout << "| 3. Update student's information					|" << endl;
+		cout << "*********************** Menu **************************" << endl;
+		cout << "| 1. Display list of students' information		|" << endl;
+		cout << "| 2. Add student information				|" << endl;
+		cout << "| 3. Update student's information			|" << endl;
 		cout << "| 4. Compute mean of list of students exams		|" << endl;
 		cout << "| 5. Compute minimum of the mean of the exams		|" << endl;
 		cout << "| 6. Compute maximum of the mean of the exams		|" << endl;
-		cout << "| 7. Exit program									|" << endl;
-		cout << "***************************************************" << endl;
+		cout << "| 7. Exit program					|" << endl;
+		cout << "*******************************************************" << endl;
 		cout << ">> ";
 		cin >> choice;
 
