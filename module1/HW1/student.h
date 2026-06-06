@@ -18,8 +18,8 @@ void displayStudents(Student students[], int numStudents);
 void addStudents(Student studentsArr[], int &numStudents);
 void idSearch(Student studentsArr[], int numStudents);
 void displayMean(Student studentsArr[], int numStudents);
-void displayMeanMin(Student studentsArr[], int numStudents) {
-void displayMeanMax(Student studentsArr[], int numStudents) {
+void displayMeanMin(Student studentsArr[], int numStudents);
+void displayMeanMax(Student studentsArr[], int numStudents);
 
 
 
