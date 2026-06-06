@@ -12,6 +12,8 @@ struct Student {
 	int exam2;
 	int exam3;
 	float mean;
-}
+};
+
+void displayStudents(Student students[], int numStudents);
 
 #endif
