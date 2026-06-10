@@ -14,7 +14,6 @@ int main() {
 	// first item to purchase
 	cout << "Item 1" << endl << "Enter the item name:" << endl;
 	getline(cin, tempName);
-	cin.ignore();
 	cout << "Enter the item price:" << endl;
 	cin >> tempPrice;
 	cout << "Enter the item quantity:" << endl;
