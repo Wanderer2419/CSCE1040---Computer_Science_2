@@ -3,6 +3,11 @@
 #include <map>
 using namespace std;
 
+bool lessThan(pair<string, Employee>& lhs, pair<string, Employee>& rhs) {
+	bool rv = (lhs->second).getSalary() < (rhs.second).getSalary();
+	return rv;
+}
+
 int main() {
 	// map instance
 	map<string, Employee> employees;
@@ -38,5 +43,24 @@ int main() {
 		cout << "Employee not found" << endl;
 	}
 
+	// print all the elements of map
+	for (it = employees.begin(); it != employees.end(); it++) {
+		cout << it->first <<", salary = " << (it->second).getSalary() << endl;
+	}
+
+	// sort based on Employee's salaray
+	vector< pair<string, Employee> > evec;
+	copy( employees.begin(), employees.end(), back_inserter(evec) );
+
+	sort( evec.begin(), evec.end(), lessThan );
+
+	// print sorted evec
+	cout << "========================" << endl;
+	vector < pair<string, Employee> >::iterator iter;
+	for (iter = evec.begin(); iter != evec.end(); iter++) {
+		cout << (it ->second).getname();
+		cout << ", salary = " << (it->second).getSalary() << endl;
+	}
+	
 	return 0;
 }
