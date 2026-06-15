@@ -1,10 +1,12 @@
 #include "employee.h"
 #include <iostream>
 #include <map>
+#include <vector>
+#include <algorithm>
 using namespace std;
 
 bool lessThan(pair<string, Employee>& lhs, pair<string, Employee>& rhs) {
-	bool rv = (lhs->second).getSalary() < (rhs.second).getSalary();
+	bool rv = (lhs.second).getSalary() < (rhs.second).getSalary();
 	return rv;
 }
 
@@ -32,7 +34,7 @@ int main() {
 	} while (ch != 'n');
 
 	// find
-	cout << "Enter employee name for search: ";
+	cout << "\nEnter employee name for search: ";
 	getline(cin, empName);
 
 	map<string, Employee>::iterator it;
@@ -44,6 +46,7 @@ int main() {
 	}
 
 	// print all the elements of map
+	cout << "\n====Sorted Employee based on name====" << endl;
 	for (it = employees.begin(); it != employees.end(); it++) {
 		cout << it->first <<", salary = " << (it->second).getSalary() << endl;
 	}
@@ -55,11 +58,11 @@ int main() {
 	sort( evec.begin(), evec.end(), lessThan );
 
 	// print sorted evec
-	cout << "========================" << endl;
+	cout << "\n====Sorted Employee based on salary====" << endl;
 	vector < pair<string, Employee> >::iterator iter;
 	for (iter = evec.begin(); iter != evec.end(); iter++) {
-		cout << (it ->second).getname();
-		cout << ", salary = " << (it->second).getSalary() << endl;
+		cout << (iter->second).getName();
+		cout << ", salary = " << (iter->second).getSalary() << endl;
 	}
 	
 	return 0;
