@@ -24,6 +24,6 @@ class Artwork {
 		string getTitle();
 		string getName();
 		int getId();
-}
+};
 
 #endif ARTWORK_H
