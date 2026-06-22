@@ -15,7 +15,7 @@ class Artwork {
 		~Artwork();		// destructor
 		Artwork(const Artwork& origObj);	// copy constructor
 		Artwork& operator=(const Artwork& rhs);	// copy assignment
-		void Print();	// print function
+		void print();	// print function
 		// mutators
 		void setTitle(string title);
 		void setName(string name);
