@@ -20,7 +20,7 @@ int main() {
 	int numStudents = 0;
 	
 	while (!endLoop) {
-		char choice;
+		int choice;		// og: char choice; and switch cases using char type (-7 points)
 		cout << endl << endl;
 		cout << "*********************** Menu **************************" << endl;
 		cout << "| 1. Display list of students' information		|" << endl;
@@ -35,17 +35,17 @@ int main() {
 		cin >> choice;
 
 		switch (choice) {
-			case '1':
+			case 1:
 				if (numStudents == 0) {
 					cout << "Empty list of students." << endl;
 				} else {
 					displayStudents(studentsArr, numStudents);
 				}
 				break;
-			case '2':
+			case 2:
 				addStudents(studentsArr, numStudents);
 				break;
-			case '3':
+			case 3:
 				if (numStudents == 0) {
 					cout << "Empty list of students." << endl;
 				} else {
@@ -53,7 +53,7 @@ int main() {
 				}
 				break;
 			
-			case '4':
+			case 4:
 				if (numStudents == 0) {
 					cout << "Empty list of students." << endl;
 				} else {
@@ -61,7 +61,7 @@ int main() {
 				}
 				break;
 			
-			case '5':
+			case 5:
 				if (numStudents == 0) {
 					cout << "Empty list of students." << endl;
 				} else {
@@ -69,7 +69,7 @@ int main() {
 				}
 				break;
 			
-			case '6':
+			case 6:
 				if (numStudents == 0) {
 					cout << "Empty list of students." << endl;
 				} else {
@@ -77,7 +77,7 @@ int main() {
 				}
 				break;
 			
-			case '7':
+			case 7:
 				cout << "Thank you for using this program. Goodbye!" << endl;
 				endLoop = true;
 				break;
