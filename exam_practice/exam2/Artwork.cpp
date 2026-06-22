@@ -2,26 +2,49 @@
 #include <iostream>
 #include <iomanip>
 using namespace std;
-/*
-class Artwork {
-	private:
-		string Title;
-		string ArtistName;
-		int* id;
-	public:
-		// constructors, desctructors, copy assignment, and print
-		Artwork();		// default constructor
-		~Artwork();		// destructor
-		Artwork(const Artwork& origObj);	// copy constructor
-		Artwork& operator=(const Artwork& rhs);	// copy assignment
-		void Print();	// print function
-		// mutators
-		void setTitle(string title);
-		void setName(string name);
-		void setId(int id);
-		// accessors
-		string getTitle();
-		string getName();
-		int getId();
-}*/
 
+Artwork::Artwork() {	// default constructor
+	Title = "none";
+	ArtistName = "none";
+	id = new int;
+	id* = 0;
+}
+Artwork::~Artwork() {	// destructor
+	delete id;
+}
+Artwork::Artwork& operator=(const Artwork& rhs) {	// copy assignment operator
+	delete this->id;
+	id = new int;
+	Title = rhs.getTitle();
+	ArtistName = rhs.getName();
+	*id = rhs.getId();
+	
+	return *this;
+}
+void Artwork::print() {		// print function
+	cout << "Title: " << Title << endl;
+	cout << "Artist's Name: " << ArtistName << endl;
+	cout << "ID #: " << *id << endl;
+}
+
+// mutators
+void Artwork::setTitle(string title) {
+	Title = title;
+}
+void Artwork::setName(string name) {
+	ArtistName = name;
+}
+void Artwork::setId(const int id) {
+	*id = id;
+}
+
+// accessors
+string Artwork::getTitle() {
+	return Title;
+}
+string Artwork::getName() {
+	return ArtistName;
+}
+int Artwork::getId() {
+	return *id;
+}
