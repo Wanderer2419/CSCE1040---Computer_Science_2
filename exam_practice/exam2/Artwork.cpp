@@ -12,16 +12,24 @@ Artwork::Artwork() {	// default constructor
 Artwork::~Artwork() {	// destructor
 	delete id;
 }
-Artwork::Artwork& operator=(const Artwork& rhs) {	// copy assignment operator
-	delete this->id;
+Artwork::Artwork(const Artwork& origObj) {
+	Title = origObj.getTitle();
+	ArtistName = origObj.getName();
 	id = new int;
-	Title = rhs.getTitle();
-	ArtistName = rhs.getName();
-	*id = rhs.getId();
-	
+	*id = origObj.getId();
+}
+Artwork::Artwork& operator=(const Artwork& rhs) {	// copy assignment operator
+	if (this != rhs) {
+		delete this->id;
+		id = new int;
+		Title = rhs.getTitle();
+		ArtistName = rhs.getName();
+		*id = rhs.getId();
+	}
 	return *this;
 }
 void Artwork::print() {		// print function
+	cout << "Artist Info------------" << endl;
 	cout << "Title: " << Title << endl;
 	cout << "Artist's Name: " << ArtistName << endl;
 	cout << "ID #: " << *id << endl;
