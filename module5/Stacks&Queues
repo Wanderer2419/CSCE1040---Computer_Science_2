@@ -1,1 +1,41 @@
+STACKS AND QUEUES
 
+Stack:
+	A specialized data storage structure
+		- Access is restricted however
+	The stack has two main functions, push and pop
+		- Insertion is done with push, and removal is done with pop
+	Stack allows access to only the last element entered into the stack
+		- Last-in-First-out (LIFO) list
+
+Stack functions:
+	Push
+		- inserts an item into the top of the stack
+		- top points to the newly added item
+		- check if stack is full?
+	Pop
+		- removes an item from the top of the stack
+		- top points to one before the removed item
+		- check empty condition?
+
+Stack implementation:
+	2 basic implementations:
+	Array-based implementation
+		- Simple and efficient, but the maximum size of the stack is fixed
+	Singly Linked List-based implementation
+		- Complicated, but there is no limit on stack size (size is subject to available memory)
+
+see stack.h, stack.cpp, and stackmain.cpp
+
+
+Queue:
+	A specialized data storage structure
+		- unlike arrays, access of elements in a queue is restricted
+	Two main operations:
+		- enqueue
+		- dequeue
+	Insertion in a queue is done using enqueue, and removal is done using dequeue
+	An item can be inserted at the end of the queue and removed from the front of the queue
+		- First-in-First-out (FIFO) list
+
+For queue implementation: see queue.h, queue.cpp, queuemain.cpp
