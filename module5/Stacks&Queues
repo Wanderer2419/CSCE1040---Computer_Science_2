@@ -25,8 +25,9 @@ Stack implementation:
 	Singly Linked List-based implementation
 		- Complicated, but there is no limit on stack size (size is subject to available memory)
 
+=========================================
 see stack.h, stack.cpp, and stackmain.cpp
-
+=========================================
 
 Queue:
 	A specialized data storage structure
@@ -38,4 +39,28 @@ Queue:
 	An item can be inserted at the end of the queue and removed from the front of the queue
 		- First-in-First-out (FIFO) list
 
+===============================================================
 For queue implementation: see queue.h, queue.cpp, queuemain.cpp
+===============================================================
+
+STL Queue:
+	The queue class defined within the C++ STL defines a container of ordered elements that follows the afformentioned "Queue" type
+		- #include <queue>
+	Ex:
+		- queue<int> intQueue;
+		- intQueue.push(10);	= adds 10 to the end of the queue
+		- intQueue.push(40);	= adds 40 to the end of the queue
+		- intQueue.pop();		= removes 10 from the front of the queue
+
+Queue functions:
+
+
+STL Deque:
+	The deque class (defined within the C++ STL) defines a container that supports insertion AND removal at BOTH the front and back
+		- #include <deque>
+	Ex:
+		- deque<int> q;
+		- q.push_front(10);
+		- q.push_back(23);
+
+Deque functions:
