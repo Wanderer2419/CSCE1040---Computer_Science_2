@@ -16,7 +16,7 @@ class Account {
 		Account(const Account& origObj);
 		// operators
 		Account& operator=(const Account& rhs);
-		Account& operator+=(const Account& rhs);
+		Account& operator+=(Account& rhs);
 
 		// mutators
 		void SetID(int id);
@@ -29,8 +29,8 @@ class Account {
 		float GetAcctBalance();
 
 		// member functions
-		void Deposit(Account acct, float amount);
-		void Withdraw(Account acct, float amount);
+		void Deposit();
+		void Withdraw();
 };
 
 #endif
