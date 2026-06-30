@@ -50,7 +50,7 @@ class Accounts {
 
 		// methods
 		void addAccount(const Acount& input);
-		Account searchID(const int id);
+		int searchID(const int id);
 		Account& at(const int i) const;
 };
 
