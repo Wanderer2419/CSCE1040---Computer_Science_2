@@ -24,9 +24,9 @@ class Account {
 		void SetAcctBalance(float balance);
 
 		// accessors
-		int GetID();
-		string GetCustName();
-		float GetAcctBalance();
+		int GetID() const;
+		string GetCustName() const;
+		float GetAcctBalance() const;
 
 		// member functions
 		void Deposit();
