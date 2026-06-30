@@ -32,7 +32,6 @@ No STL is allowed for this homework.
 #define ACCOUNTS_H
 
 #include "account.h"
-#include <
 using namespace std;
 
 class Accounts {
@@ -40,6 +39,7 @@ class Accounts {
 		const int SIZE = 1000;
 		Account* first;
 		int countSize;
+		Account* acctsArray;
 	public:
 		// constructors
 		Accounts();	//default constructor
