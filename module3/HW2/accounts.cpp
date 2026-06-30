@@ -1,10 +1,4 @@
 /*
-		▪ Default constructor
-			• Allocate memory for a dynamic array of size defined by the maximum
-				size (private data member) and initialize size to zero.
-		▪ Destructor
-			• Deallocate memory that was allocated in the constructors and reset
-				the size (counter).
 		▪ Add account to the array – takes an object of the Account class as an
 			argument (pass by reference).
 		▪ Find an object of the Account class in the dynamic array based on the
@@ -18,16 +12,40 @@ using namespace std;
 //const int SIZE = 1000;
 //Account* first;
 //int countSize;
+//Account* acctsArray;
 
-		// constructors
-		Accounts() {	//default constructor
-			
-		}
-		~Accounts() {	// destructor
-			
-		}
+// constructors
+Accounts() {	//default constructor
+	acctsArray = new Account[SIZE];
+	countSize = 0;
+}
+~Accounts() {	// destructor
+	delete[] acctsArray;
+	delete first;
+	countSize = 0;
+}
 
-		// methods
-		void addAccount(const Acount& input);
-		Account searchID(const int id);
-		Account& at(const int i) const;
+// methods
+void addAccount(const Account& input) {
+	if (countSize < SIZE) {
+		acctsArray[countSize] = input;
+		if (countSize == 0) {	// if this is the first input into acctsArray, the point first to that first element
+			first = &acctsArray[0];
+		}
+		countSize++;
+	}
+}
+Account searchID(const int id) {
+	Account temp;
+	for (int i = 0; i < countSize; i++) {
+		if (acctsArray[i].GetID() == id) {
+			temp = acctsArray[i];
+			break;
+		}
+	}
+	return temp;	// if temp has ID of -1, then no account with the given ID number was found
+}
+Account& at(const int i) const {
+	Account temp = acctsArray[i];
+	return temp;
+}
