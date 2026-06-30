@@ -45,6 +45,9 @@ class Accounts {
 		Accounts();	//default constructor
 		~Accounts();	// destructor
 
+		// accessor
+		int Size() const;
+
 		// methods
 		void addAccount(const Acount& input);
 		Account searchID(const int id);
