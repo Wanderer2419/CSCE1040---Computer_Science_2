@@ -1,1 +1,87 @@
+#include "account.h"
+#include <iostream>
+using namespace std;
 
+// constructors
+Account::Account() {	// default constructor
+	ID = new int;
+	*ID = 0;
+	customerName = "";
+	acctBalance = 0.0;
+}
+Account::~Account() {	// destructor
+	delete ID;
+}
+Account::Account(const Account& origObj) {	// copy constructor
+	ID = new int;
+	*ID = origObj.GetID();
+	customerName = origObj.GetCustName();
+	acctBalance = origObj.GetAcctBalance();
+}
+
+// operators
+Account& Account::operator=(const Account& rhs) {
+	if (this != &rhs) {
+		delete ID;
+		ID = new int;
+		*ID = rhs.GetID();
+		customerName = rhs.GetCustName();
+		acctBalance = rhs.GetAcctBalance();
+	}
+}
+Account& Account::operator+=(Account& rhs) {
+	float temp;
+	cout << "Enter the transfer amount: $";
+	cin >> temp;
+	if (temp < rhs.GetAcctBalance()) {
+		rhs.SetAcctBalance(rhs.GetAcctBalance() - temp);
+		acctBalance += temp;
+	} else {
+		cout << "Error: Insufficient balance. Source account has a remaining balance of $" << rhs.GetAcctBalance() << endl;
+	}
+	return *this;
+}
+
+// mutators
+void Account::SetID(int id) {
+	delete ID;
+	ID = new int;
+	*ID = id;
+}
+void Account::SetCustName(string name) {
+	customerName = name;
+}
+void Account::SetAcctBalance(float balance) {
+	acctBalance = balance;
+}
+
+// accessors
+int Account::GetID() {
+	return *ID;
+}
+string Account::GetCustName() {
+	return customerName;
+}
+float Account::GetAcctBalance() {
+	return acctBalance;
+}
+
+// other member functions
+void Account::Deposit() {
+	float temp;
+	cout << "Enter the deposit amount: $";
+	cin >> temp;
+	accountBalance += temp;
+	cout << "Deposited $" << temp << " int account id " << *ID << endl;
+}
+void Account::Withdraw() {
+	float temp;
+	cout << "Enter the withdrawal amount: $";
+	cin >> temp;
+	if (widr <= accountBalance) {
+		accountBalance -= temp;
+		cout << "Withdrew $" << temp << " from account id " << *ID << endl;
+	} else {
+		cout << "Error: failed to withdraw $" << temp << " from account id " << *ID << endl;
+	}
+}
