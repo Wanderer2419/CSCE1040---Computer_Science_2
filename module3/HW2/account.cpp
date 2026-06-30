@@ -5,7 +5,7 @@ using namespace std;
 // constructors
 Account::Account() {	// default constructor
 	ID = new int;
-	*ID = 0;
+	*ID = -1;
 	customerName = "";
 	acctBalance = 0.0;
 }
