@@ -56,3 +56,22 @@ as adding a new account, deposit, withdrawal, transfer, and printing all account
 	o Any other data member (s) and/or methods/mutators/accessors needed for your
 		implementation.
 */
+
+#ifndef ACCOUNTSYSTEM_H
+#define ACCOUNTSYSTEM_H
+
+#include "accounts.h"
+using namespace std;
+
+class AccountSystem {
+	private:
+		Accounts accts;
+	public:
+		void AddAccount() const;
+		void Deposit() const;
+		void Withdraw() const;
+		void Transfer() const;
+		void PrintAll() const;
+};
+
+#endif
