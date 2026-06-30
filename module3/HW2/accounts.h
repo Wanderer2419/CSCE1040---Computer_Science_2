@@ -27,3 +27,28 @@ No STL is allowed for this homework.
 	o Any other data member (s) and/or methods/mutators/accessors needed for your
 		implementation
 */
+
+#ifndef ACCOUNTS_H
+#define ACCOUNTS_H
+
+#include "account.h"
+#include <
+using namespace std;
+
+class Accounts {
+	private:
+		const int SIZE = 1000;
+		Account* first;
+		int countSize;
+	public:
+		// constructors
+		Accounts();	//default constructor
+		~Accounts();	// destructor
+
+		// methods
+		void addAccount(const Acount& input);
+		Account searchID(const int id);
+		Account& at(const int i) const;
+};
+
+#endif
