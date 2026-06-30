@@ -71,14 +71,14 @@ void Account::Deposit() {
 	float temp;
 	cout << "Enter the deposit amount: $";
 	cin >> temp;
-	accountBalance += temp;
+	acctBalance += temp;
 	cout << "Deposited $" << temp << " int account id " << *ID << endl;
 }
 void Account::Withdraw() {
 	float temp;
 	cout << "Enter the withdrawal amount: $";
 	cin >> temp;
-	if (widr <= accountBalance) {
+	if (temp <= acctBalance) {
 		accountBalance -= temp;
 		cout << "Withdrew $" << temp << " from account id " << *ID << endl;
 	} else {
