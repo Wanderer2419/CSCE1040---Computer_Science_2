@@ -56,13 +56,13 @@ void Account::SetAcctBalance(float balance) {
 }
 
 // accessors
-int Account::GetID() {
+int Account::GetID() const {
 	return *ID;
 }
-string Account::GetCustName() {
+string Account::GetCustName() const {
 	return customerName;
 }
-float Account::GetAcctBalance() {
+float Account::GetAcctBalance() const {
 	return acctBalance;
 }
 
