@@ -1,5 +1,6 @@
 #include "account.h"
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
 // constructors
@@ -37,6 +38,7 @@ Account& Account::operator+=(Account& source) {
 	if (temp < source.GetAcctBalance()) {
 		source.SetAcctBalance(source.GetAcctBalance() - temp);
 		acctBalance += temp;
+		cout << "Successfully transfered amount $" << fixed << setprecision(2) << temp << " from source acccoun id " << source.GetID() << " to destination account id " << this->GetID() << endl;
 	} else {
 		cout << "Error: Insufficient balance. Source account has a remaining balance of $" << source.GetAcctBalance() << endl;
 	}
@@ -73,7 +75,7 @@ void Account::Deposit() {
 	cout << "Enter the deposit amount: $";
 	cin >> temp;
 	acctBalance += temp;
-	cout << "Deposited $" << temp << " int account id " << *ID << endl;
+	cout << "Deposited $" << fixed << setprecision(2) << temp << " int account id " << *ID << endl;
 }
 void Account::Withdraw() {
 	float temp;
@@ -81,8 +83,8 @@ void Account::Withdraw() {
 	cin >> temp;
 	if (temp <= acctBalance) {
 		acctBalance -= temp;
-		cout << "Withdrew $" << temp << " from account id " << *ID << endl;
+		cout << "Withdrew $" << fixed << setprecision(2) << temp << " from account id " << *ID << endl;
 	} else {
-		cout << "Error: failed to withdraw $" << temp << " from account id " << *ID << endl;
+		cout << "Error: failed to withdraw $" << fixed << setprecision(2) temp << " from account id " << *ID << endl;
 	}
 }
