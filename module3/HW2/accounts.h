@@ -49,7 +49,7 @@ class Accounts {
 		int Size() const;
 
 		// methods
-		void addAccount(const Account& input) const;
+		void addAccount(const Account& input);
 		int searchID(const int id);
 		Account& at(const int i) const;
 };
