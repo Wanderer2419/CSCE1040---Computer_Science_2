@@ -42,6 +42,5 @@ int Accounts::searchID(const int id) {
 	return index;	// if index = -1, then the id was not found in the container
 }
 Account& Accounts::at(const int i) const {
-	Account temp = acctsArray[i];
-	return temp;
+	return (acctsArray[i]);
 }
