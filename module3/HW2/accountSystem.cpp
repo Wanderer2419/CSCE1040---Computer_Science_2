@@ -27,6 +27,7 @@ void AccountSystem::AddAccount() {
 		input.SetAcctBalance(deposit);
 		// pass input into the accounts
 		accts.addAccount(input);
+		cout << "Added new account id " << id << " with initial balance $" << fixed << setprecision(2) << deposit << endl;
 	}
 }
 
