@@ -22,7 +22,7 @@ int Accounts::Size() const {
 }
 
 // methods
-void Accounts::addAccount(const Account& input) {
+void Accounts::addAccount(const Account& input) const {
 	if (countSize < SIZE) {
 		acctsArray[countSize] = input;
 		if (countSize == 0) {	// if this is the first input into acctsArray, the point first to that first element
