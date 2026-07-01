@@ -12,7 +12,7 @@ Accounts::Accounts() {	//default constructor
 }
 Accounts::~Accounts() {	// destructor
 	delete[] acctsArray;
-//	delete first;
+	delete first;
 	countSize = 0;
 }
 
