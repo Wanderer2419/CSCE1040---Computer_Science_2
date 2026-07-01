@@ -90,7 +90,7 @@ void AccountSystem::PrintAll() const {
 		for (int i = 0; i < accts.Size(); i++) {
 			cout << "| " << setw(4) << left << accts.at(i).GetID() << 
 			" | " << setw(30) << left << accts.at(i).GetCustName() << 
-			" | $ " << setprecision(2) << setw(13) << right << accts.at(i).GetAcctBalance() << " |" << endl;
+			" | $ " << fixed << setprecision(2) << setw(13) << right << accts.at(i).GetAcctBalance() << " |" << endl;
 			cout << "+=========================================================+" << endl;
 		}
 	} else {
