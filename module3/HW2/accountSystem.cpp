@@ -13,12 +13,12 @@ void AccountSystem::AddAccount() {
 	// read from user
 	cout << "Enter account id: ";
 	cin >> id;
+	cin.ignore();
 	if (accts.searchID(id) != -1) {
 		cout << "Error: Account with ID " << id << " already exists." << endl;
 	} else {
 		cout << "Enter customer account name: ";
 		getline(cin, name);
-		cin.ignore();
 		cout << "Enter initial deposit amount: $";
 		cin >> deposit;
 		// use mutators
@@ -33,7 +33,6 @@ void AccountSystem::AddAccount() {
 void AccountSystem::Deposit() {
 	if (accts.Size() > 0) {
 		int id;
-		float deposit;
 		int index;
 		cout << "Enter account id: ";
 		cin >> id;
@@ -50,7 +49,6 @@ void AccountSystem::Deposit() {
 void AccountSystem::Withdraw() {
 	if (accts.Size() > 0) {
 		int id;
-		float deposit;
 		int index;
 		cout << "Enter account id: ";
 		cin >> id;
