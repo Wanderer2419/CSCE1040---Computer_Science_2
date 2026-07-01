@@ -32,14 +32,12 @@ void Accounts::addAccount(const Account& input) {
 	}
 }
 int Accounts::searchID(const int id) {
-	int index = -1;
 	for (int i = 0; i < countSize; i++) {
 		if (acctsArray[i].GetID() == id) {
-			index = i;
-			break;
+			return i;
 		}
 	}
-	return index;	// if index = -1, then the id was not found in the container
+	return -1;	// if index = -1, then the id was not found in the container
 }
 Account& Accounts::at(const int i) const {
 	return (acctsArray[i]);
