@@ -73,7 +73,7 @@ void AccountSystem::Transfer() {
 		cin >> idDes;
 		indexSor = accts.searchID(idSor);
 		indexDes = accts.searchID(idDes);
-		if (indexSor == -1 || indexDes == -2) {
+		if (indexSor == -1 || indexDes == -1) {
 			cout << "Error: Source or destination account number not found. Operation failed." << endl;
 		} else {
 			accts.at(indexDes) += accts.at(indexSor);
