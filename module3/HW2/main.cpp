@@ -23,20 +23,25 @@ int main() {
 		cout << "| 4 : Transfer into account		|" << endl;
 		cout << "| 5 : Print a list of all accounts	|" << endl;
 		cout << "| 6 : End transaction (Exit)		|" << endl;
-		cout << "+--------------------------------------+" << endl;
+		cout << "+--------------------------------------+" << endl << endl;
 		cout << "> ";
 		cin >> choice;
 		
 		if (choice == 1) {
 			system1.AddAccount();
+			cout << endl;
 		} else if (choice == 2) {
 			system1.Deposit();
+			cout << endl;
 		} else if (choice == 3) {
 			system1.Withdraw();
+			cout << endl;
 		} else if (choice == 4) {
 			system1.Transfer();
+			cout << endl;
 		} else if (choice == 5) {
 			system1.PrintAll();
+			cout << endl;
 		} else if (choice == 6) {
 			cout << "Thank you for running the program. Goodbye!" << endl;
 			break;
