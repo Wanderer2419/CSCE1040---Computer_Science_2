@@ -28,6 +28,7 @@ Account& Account::operator=(const Account& rhs) {
 		customerName = rhs.GetCustName();
 		acctBalance = rhs.GetAcctBalance();
 	}
+	return *this;
 }
 Account& Account::operator+=(Account& source) {
 	float temp;
