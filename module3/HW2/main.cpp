@@ -9,21 +9,21 @@ int main() {
 	cout << "| Computer Science and Engineering		|" << endl;
 	cout << "| CSCE 1040 - Computer Science II		|" << endl;
 	cout << "| Aiden Does	ad1763	aidendoes@my.unt.edu 	|" << endl;
-	cout << "+----------------------------------------------+" << endl;
+	cout << "+----------------------------------------------+" << endl << endl;
 
 	AccountSystem system1;
 	int choice = 0;
 
 	while (choice != 6) {
-		cout << "+------------------------------------------+" << endl;
-		cout << "| Enter account selection			|" << endl;
+		cout << "+--------------------------------------+" << endl;
+		cout << "| Enter account selection		|" << endl;
 		cout << "| 1 : Add new account			|" << endl;
-		cout << "| 2 : Deposit into account			|" << endl;
+		cout << "| 2 : Deposit into account		|" << endl;
 		cout << "| 3 : Withdraw from account		|" << endl;
 		cout << "| 4 : Transfer into account		|" << endl;
-		cout << "| 5 : Print a list of all accounts		|" << endl;
+		cout << "| 5 : Print a list of all accounts	|" << endl;
 		cout << "| 6 : End transaction (Exit)		|" << endl;
-		cout << "+------------------------------------------+" << endl;
+		cout << "+--------------------------------------+" << endl;
 		cout << "> ";
 		cin >> choice;
 		
