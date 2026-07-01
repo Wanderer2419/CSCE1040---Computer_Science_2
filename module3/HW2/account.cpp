@@ -29,15 +29,15 @@ Account& Account::operator=(const Account& rhs) {
 		acctBalance = rhs.GetAcctBalance();
 	}
 }
-Account& Account::operator+=(Account& rhs) {
+Account& Account::operator+=(Account& source) {
 	float temp;
 	cout << "Enter the transfer amount: $";
 	cin >> temp;
-	if (temp < rhs.GetAcctBalance()) {
-		rhs.SetAcctBalance(rhs.GetAcctBalance() - temp);
+	if (temp < source.GetAcctBalance()) {
+		source.SetAcctBalance(source.GetAcctBalance() - temp);
 		acctBalance += temp;
 	} else {
-		cout << "Error: Insufficient balance. Source account has a remaining balance of $" << rhs.GetAcctBalance() << endl;
+		cout << "Error: Insufficient balance. Source account has a remaining balance of $" << source.GetAcctBalance() << endl;
 	}
 	return *this;
 }
