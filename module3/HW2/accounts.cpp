@@ -12,7 +12,7 @@ Accounts::Accounts() {	//default constructor
 }
 Accounts::~Accounts() {	// destructor
 	delete[] acctsArray;
-	delete first;
+//	delete first;
 	countSize = 0;
 }
 
@@ -22,7 +22,7 @@ int Accounts::Size() const {
 }
 
 // methods
-void Accounts::addAccount(const Account& input) const {
+void Accounts::addAccount(const Account& input) {
 	if (countSize < SIZE) {
 		acctsArray[countSize] = input;
 		if (countSize == 0) {	// if this is the first input into acctsArray, the point first to that first element
