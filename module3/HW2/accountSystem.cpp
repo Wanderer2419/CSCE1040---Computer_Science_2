@@ -38,11 +38,11 @@ void AccountSystem::Deposit() const {
 		int index;
 		cout << "Enter account id: ";
 		cin >> id;
-		index = accts.SearchID();
+		index = accts.searchID();
 		if (index == -1) {
 			cout << "Error: account with id " << id << " not found." << endl;
 		} else {
-			accts.at(index).Desposit();
+			accts.at(index).Deposit();
 		}
 	} else {
 		cout << "Empty account list." << endl;
@@ -55,11 +55,11 @@ void AccountSystem::Withdraw() const {
 		int index;
 		cout << "Enter account id: ";
 		cin >> id;
-		index = accts.SearchID(id);
+		index = accts.searchID(id);
 		if (index == -1) {
 			cout << "Error: account with id " << id << " not found." << endl;
 		} else {
-			accts.at(index).withdraw();
+			accts.at(index).Withdraw();
 		}
 	} else {
 		cout << "Empty account list." << endl;
@@ -71,10 +71,10 @@ void AccountSystem::Transfer() const {
 		cout << "Enter source account id: ";
 		cin >> idSor;
 		cout << "Enter destination account id: ";
-		cin >> isDes;
-		indexSor = accts.SearchID(idSor);
-		indexDes = accts.SearchID(idDes);
-		if (index1 == -1 || index2 == -2)) {
+		cin >> idDes;
+		indexSor = accts.searchID(idSor);
+		indexDes = accts.searchID(idDes);
+		if (indexSor == -1 || indexDes == -2) {
 			cout << "Error: Source or destination account number not found. Operation failed." << endl;
 		} else {
 			accts.at(indexDes) += accts.at(indexSor);
@@ -91,7 +91,7 @@ void AccountSystem::PrintAll() const {
 		for (int i = 0; i < accts.Size(); i++) {
 			cout << "| " << setw(4) << left << accts.at(i).GetID() << 
 			" | " << setw(30) << left << accts.at(i).GetCustName() << 
-			" | $ " << setprecision(2) << setw(13) << right << accts.at(i).GetAcctsBalance() << " |" << endl;
+			" | $ " << setprecision(2) << setw(13) << right << accts.at(i).GetAcctBalance() << " |" << endl;
 			cout << "+=========================================================+" << endl;
 		}
 	} else {
