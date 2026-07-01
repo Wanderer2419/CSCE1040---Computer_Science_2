@@ -14,7 +14,7 @@ void AccountSystem::AddAccount() const {
 	// read from user
 	cout << "Enter account id: ";
 	cin >> id;
-	if (id == accts.SearchID(id).GetID()) {
+	if (accts.SearchID(id) != -1) {
 		cout << "Error: Account with ID " << id << " already exists." << endl;
 	} else {
 		cout << "Enter customer account name: ";
@@ -32,14 +32,69 @@ void AccountSystem::AddAccount() const {
 }
 
 void AccountSystem::Deposit() const {
-	
+	if (accts.Size() > 0) {
+		int id;
+		float deposit;
+		int index;
+		cout << "Enter account id: ";
+		cin >> id;
+		index = accts.SearchID();
+		if (index == -1) {
+			cout << "Error: account with id " << id << " not found." << endl;
+		} else {
+			accts.at(index).Desposit();
+		}
+	} else {
+		cout << "Empty account list." << endl;
+	}
 }
 void AccountSystem::Withdraw() const {
-	
+	if (accts.Size() > 0) {
+		int id;
+		float deposit;
+		int index;
+		cout << "Enter account id: ";
+		cin >> id;
+		index = accts.SearchID(id);
+		if (index == -1) {
+			cout << "Error: account with id " << id << " not found." << endl;
+		} else {
+			accts.at(index).withdraw();
+		}
+	} else {
+		cout << "Empty account list." << endl;
+	}
 }
 void AccountSystem::Transfer() const {
-	
+	if (accts.Size() > 0) {
+		int idSor, idDes, indexSor, indexDes;
+		cout << "Enter source account id: ";
+		cin >> idSor;
+		cout << "Enter destination account id: ";
+		cin >> isDes;
+		indexSor = accts.SearchID(idSor);
+		indexDes = accts.SearchID(idDes);
+		if (index1 == -1 || index2 == -2)) {
+			cout << "Error: Source or destination account number not found. Operation failed." << endl;
+		} else {
+			accts.at(indexDes) += accts.at(indexSor);
+		}
+	} else {
+		cout << "Empty account list." << endl;
+	}
 }
 void AccountSystem::PrintAll() const {
-	
+	if (accts.Size() > 0) {
+		cout << "+=========================================================+" << endl;
+		cout << "| Acct | Customer Account Name          | Balance         |" << endl;
+		cout << "+=========================================================+" << endl;
+		for (int i = 0; i < accts.Size(); i++) {
+			cout << "| " << setw(4) << left << accts.at(i).GetID() << 
+			" | " << setw(30) << left << accts.at(i).GetCustName() << 
+			" | $ " << setprecision(2) << setw(13) << right << accts.at(i).GetAcctsBalance() << " |" << endl;
+			cout << "+=========================================================+" << endl;
+		}
+	} else {
+		cout << "Empty account list." << endl;
+	}
 }
