@@ -85,6 +85,6 @@ void Account::Withdraw() {
 		acctBalance -= temp;
 		cout << "Withdrew $" << fixed << setprecision(2) << temp << " from account id " << *ID << endl;
 	} else {
-		cout << "Error: failed to withdraw $" << fixed << setprecision(2) temp << " from account id " << *ID << endl;
+		cout << "Error: failed to withdraw $" << fixed << setprecision(2) << temp << " from account id " << *ID << endl;
 	}
 }
