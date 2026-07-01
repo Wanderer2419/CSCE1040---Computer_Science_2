@@ -37,7 +37,7 @@ void AccountSystem::Deposit() {
 		int index;
 		cout << "Enter account id: ";
 		cin >> id;
-		index = accts.searchID();
+		index = accts.searchID(id);
 		if (index == -1) {
 			cout << "Error: account with id " << id << " not found." << endl;
 		} else {
