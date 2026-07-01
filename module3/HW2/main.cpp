@@ -59,7 +59,7 @@ int main() {
 		cin >> choice;
 		
 		if (choice == 1) {
-			system1.AddAcount();
+			system1.AddAccount();
 		} else if (choice == 2) {
 			system1.Deposit();
 		} else if (choice == 3) {
