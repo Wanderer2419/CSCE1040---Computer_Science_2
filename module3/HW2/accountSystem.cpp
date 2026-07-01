@@ -1,4 +1,3 @@
-Accounts accts;
 #include "accountSystem.h"
 #include <iostream>
 #include <iomanip>
