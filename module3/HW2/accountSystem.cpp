@@ -4,7 +4,7 @@
 #include <string>
 using namespace std;
 
-void AccountSystem::AddAccount() const {
+void AccountSystem::AddAccount() {
 	Account input;
 	int id;
 	string name;
@@ -30,7 +30,7 @@ void AccountSystem::AddAccount() const {
 	}
 }
 
-void AccountSystem::Deposit() const {
+void AccountSystem::Deposit() {
 	if (accts.Size() > 0) {
 		int id;
 		float deposit;
@@ -47,7 +47,7 @@ void AccountSystem::Deposit() const {
 		cout << "Empty account list." << endl;
 	}
 }
-void AccountSystem::Withdraw() const {
+void AccountSystem::Withdraw() {
 	if (accts.Size() > 0) {
 		int id;
 		float deposit;
@@ -64,7 +64,7 @@ void AccountSystem::Withdraw() const {
 		cout << "Empty account list." << endl;
 	}
 }
-void AccountSystem::Transfer() const {
+void AccountSystem::Transfer() {
 	if (accts.Size() > 0) {
 		int idSor, idDes, indexSor, indexDes;
 		cout << "Enter source account id: ";
