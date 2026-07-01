@@ -13,7 +13,7 @@ void AccountSystem::AddAccount() const {
 	// read from user
 	cout << "Enter account id: ";
 	cin >> id;
-	if (accts.SearchID(id) != -1) {
+	if (accts.searchID(id) != -1) {
 		cout << "Error: Account with ID " << id << " already exists." << endl;
 	} else {
 		cout << "Enter customer account name: ";
