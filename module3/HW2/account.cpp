@@ -79,7 +79,7 @@ void Account::Withdraw() {
 	cout << "Enter the withdrawal amount: $";
 	cin >> temp;
 	if (temp <= acctBalance) {
-		accountBalance -= temp;
+		acctBalance -= temp;
 		cout << "Withdrew $" << temp << " from account id " << *ID << endl;
 	} else {
 		cout << "Error: failed to withdraw $" << temp << " from account id " << *ID << endl;
