@@ -1,1 +1,8 @@
+RECURSION
 
+Recursion refers to a function calling itself.
+Main idea:
+	- The problem is solved by repeatedly breaking down the problem into smaller versions of the same problem
+	- At some point, the subproblems are trivial and can be solved easily. This is called the base step
+	- Finally, results from the subproblems are combined until we get back to the original problem and get a solution.
+		- This is kind of a telescoping system
