@@ -28,3 +28,53 @@ Implementation of the main function (in main.cpp) consists of:
 		accept new user input to perform another operation, thus repeating the process
 		(except in the case of option 6, where the user wants to terminate the program).
   */
+
+#include "accountSystem.h"
+#include <iostream>
+#include <iomanip>
+#include <string>
+using namespace std;
+
+int main() {
+	cout << "+----------------------------------------------+" << endl;
+	cout << "| Computer Science and Engineering		|" << endl;
+	cout << "| CSCE 1040 - Computer Science II		|" << endl;
+	cout << "| Aiden Does	ad1763	aidendoes@my.unt.edu 	|" << endl;
+	cout << "+----------------------------------------------+" << endl;
+
+	AccountSystem system1;
+	int choice = 0;
+
+	while (choice != 6) {
+		cout << "+------------------------------------------+" << endl;
+		cout << "| Enter account selection			|" << endl;
+		cout << "| 1 : Add new account			|" << endl;
+		cout << "| 2 : Deposit into account			|" << endl;
+		cout << "| 3 : Withdraw from account		|" << endl;
+		cout << "| 4 : Transfer into account		|" << endl;
+		cout << "| 5 : Print a list of all accounts		|" << endl;
+		cout << "| 6 : End transaction (Exit)		|" << endl;
+		cout << "+------------------------------------------+" << endl;
+		cout << "> ";
+		cin >> choice;
+		
+		if (choice == 1) {
+			system1.AddAcount();
+		} else if (choice == 2) {
+			system1.Deposit();
+		} else if (choice == 3) {
+			system1.Withdraw();
+		} else if (choice == 4) {
+			system1.Transfer();
+		} else if (choice == 5) {
+			system1.PrintAll();
+		} else if (choice == 6) {
+			cout << "Thank you for running the program. Goodbye!" << endl;
+			break;
+		} else {
+			cout << "Error: Invalid selection. Enter a value between 1-6." << endl;
+		}
+	}
+	
+	return 0;
+}
