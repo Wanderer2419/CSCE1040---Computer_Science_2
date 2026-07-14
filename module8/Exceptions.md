@@ -5,18 +5,18 @@
 - We can create exception blocks to detect and handle errors during program execution
 
 ### Error handling strategies:
-Optimism (ie: denial)
+Optimism (ie: denial):
 - Assume that there will be no errors in the program and pretend to write perfect code every time
-Plant for the worst (ie: paranoia)
+Plan for the worst (ie: paranoia):
 - Anticipate every possible error that could possibly occur and write lots of if statements
-Fix it when it occurs (ie: procrastination)
+Fix it when it occurs (ie: procrastination):
 - Figure out where things go wrong and put lots of asserts in, but don't fix them
 
 ### Assert the truth:
-Function assert
+Function assert:
 - Check if an expression meets certain conditions
 - If conditions are not met, it terminates the program
-Example: Divide by zero
+Example: Divide by zero:
 - if divisor is zero, assert terminates the program with an error message
 Ex:
 - assert (divisor != 0);
