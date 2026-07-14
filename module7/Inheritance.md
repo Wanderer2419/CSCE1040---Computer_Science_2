@@ -6,17 +6,17 @@ Often, classes are similar to each other with additions or variations
 	- When give two other classes, "rectangle" and "triangle", we can alter the original polygon class to make the 'inheritance' easier.
 
 - Ex:
-'	class polygon {
-		protected:
-			int numVertices;
-			float *xcoord, *ycoord;
-		public:
-			void set(float *x, float *y, int nV);
-	}
-	class rectangle : public polygon {
-		public:
-			float area();
-	}'
+	1. class polygon {
+	2.  protected:
+	3.   int numVertices;
+	4.   float *xcoord, *ycoord;
+	5.  public:
+	6.   void set(float *x, float *y, int nV);
+	7. }
+	8. class rectangle : public polygon {
+	9.  public:
+	10.  float area();
+	11. } 
 - This copies everything from the polygon class into the rectangle class, and then adds a specific function to the rectangle class.
 
 
