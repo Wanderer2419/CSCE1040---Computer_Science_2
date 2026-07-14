@@ -1,11 +1,12 @@
-INHERITANCE
+# INHERITANCE
 
+### Inheritance Concept
 Often, classes are similar to each other with additions or variations
-Take for example, a polygon class which contains the x and y locations of vertices, the number of vertices, etc.
-- When give two other classes, "rectangle" and "triangle", we can alter the original polygon class to make the 'inheritance' easier.
+- Take for example, a polygon class which contains the x and y locations of vertices, the number of vertices, etc.
+	- When give two other classes, "rectangle" and "triangle", we can alter the original polygon class to make the 'inheritance' easier.
 
-Ex:
-	class polygon {
+- Ex:
+'	class polygon {
 		protected:
 			int numVertices;
 			float *xcoord, *ycoord;
@@ -15,9 +16,12 @@ Ex:
 	class rectangle : public polygon {
 		public:
 			float area();
-	}
-This copies everything from the polygon class into the rectangle class, and then adds a specific function to the rectangle class.
+	}'
+- This copies everything from the polygon class into the rectangle class, and then adds a specific function to the rectangle class.
 
+
+
+  
 Why should we use inheritance? Because it's useful for:
 - building class types from existing class types
 - defining new class types to be a specialization or augmentation of existing types
