@@ -30,6 +30,7 @@ Recursion refers to a function calling itself.
 	- if b = x[mid], return mid;
 	- if b < x[mid], then b can only be in the left half of x[]. So, call the function recursively on the left half of x[]
 	- if b > x[mid], then b can only be in the right half of x[]. So, call the function recursively on the right half of x[]
+ - See binarySearch.cpp for full program
 
 ### Merge Sort
 - The general problem of sorting is to take an input of the unordered array x[] and output the same set of data but sorted in increasing order.
@@ -50,4 +51,4 @@ Recursion refers to a function calling itself.
 	2. Remove the smaller head and put it next in the output
 - Now either y or z is empty. Move the non-empty array to the end of output and stop.
 - The output is now fully sorted
-- See mergeSort.cpp for code
+- See mergeSort.cpp for full program
