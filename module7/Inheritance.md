@@ -82,7 +82,7 @@ An overridden member function can be called by an overriding member function by 
 ### Constructor rules for derived classes
 - The default constructor and destructor of the base class are always called when a new object of a derived class is created or destroyed
 - You can also specify a constructor of the base class other than the default constructor
-- See constructorRules.cpp for an example of each scenarios
+- See **constructorRules.cpp** for an example of each scenarios
 
 ### Constructor / Destructor order
 - Destructors, constructors, and assignment operators are not inherited
