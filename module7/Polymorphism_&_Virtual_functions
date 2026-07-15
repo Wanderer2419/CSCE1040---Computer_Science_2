@@ -1,0 +1,50 @@
+# POLYMORPHISM AND VIRTUAL FUNCTIONS
+
+### Polymorphism
+Polymorphism is the ability to determine which of several functions or methods (within the class hierarchy) with the same name should be invoked
+- Polymorphism is composed of two Greek words
+	- Poly, which means many
+	- Morphe, which means form
+- Two main types
+	- Compile-Time (static): compiler determines which function to call at compile-time
+	- Runtime (dynamic): determination is made while the program is running
+
+### Compile-time polymorphism
+- Function overloading
+	- Compiler determines which function to call based on the function's arguments
+	- Basically, what function should be called based on how many, or what type of arguments the function is called with
+
+### Runtime polymorphism
+- Derived/base class pointer conversion
+	- A pointer to a derived class is inherently converted to a pointer to the base class
+	- Usually a collection of objects of both base and derived class types are required
+	- Ex:
+		- vector<Person*> persons;
+- Similarly, polymorphism is also used for references to objects
+	- Ex:
+		- Person& per; declares a reference that can refer to either Person or Student objects
+
+### Virtual functions
+To work runtime polymorphism, member functions of a base class must be virtual functions
+- C++ matches a function call with the correct function definition at compilation time
+	- AKA: **static binding**
+- Compiler can match a specific function call with the correct function at run time
+	- AKA: **dynamic binding**
+	- declare a function with the keyword **virtual** if you want the compiler to use dynamic binding for that specific function
+
+### Declaring virtual functions
+- A virtual function is declared by prepending the keyword "virtual"
+	- Ex:
+		- virtual void printInfo() const;
+- The virtual keyword indicates to the compiler that it should choose the appropriate definition of a function based on the type of object that the pointer or reference refers to.
+
+### Declaring virtual and override
+- Optionally, the keyword override can be used to indicate that the virtual function is overridden in a derived class
+- Ex:
+	- class Person {
+		- virtual void printInfo() const;
+	- };
+	- class Student : public Person {
+		- void printInfo() const override;
+	- };
+- See **person.cpp** for an example of virtual functions
