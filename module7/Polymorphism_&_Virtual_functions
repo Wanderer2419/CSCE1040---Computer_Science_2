@@ -48,3 +48,43 @@ To work runtime polymorphism, member functions of a base class must be virtual f
 		- void printInfo() const override;
 	- };
 - See **person.cpp** for an example of virtual functions
+
+### More on virtual functions and override
+- Overridden function must have same name and same parameter list
+	- No need to use the virtual keyword again
+	- Return type can be different
+- If the parameter lists are different, they are considered different functions
+	- In this case, it is not overriden, but *hidden*
+	- hidden methods cannot be called
+
+### Pure virtual functions
+- A virtual function declared with no definition
+	- Base class contains no implmentation at all
+	- Called a pure virtual function
+	- Assigned with 0
+- Class containing a pure virtual function is an abstract class
+	- Similar to Java/C# *interfaces*
+	- Cannot instantiate from abstract classes
+- Enforces a design through inheritance hierarchy
+	- Inherited classes must define implementation
+
+### Virtual destructor
+- If a destructor is not declared as virtual, then the compiler uses type of pointer to decide which method to call
+	- The solution to this is to declare the destructor as a virtual member
+
+### Is-a versus has-a relationship
+Inheritance vs composition
+- Composition
+	- Idea that one object may be made up of other objects
+- Has-a
+	- class Student contains a vector of class Classes
+- Is-a
+	- class Student is a derivative of class Person
+
+### Unified Modeling Language (UML)
+- Programmers often draw class inheritance relationships usign UML notation
+- Member access
+	- (-) means private
+	- (+) means public
+	- (#) means protected
+- A solid line with a closed, unfilled arrowhead indicates a class is derived from another class
