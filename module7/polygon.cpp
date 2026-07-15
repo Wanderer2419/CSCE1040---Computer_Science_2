@@ -38,9 +38,10 @@ void Polygon::addPoint(int x, int y) {
 		p->x = x;
 		p->y = y;
 		points.push_back(p);
-	}
-	// friend funcion of Polygon class
-	ostream& operator<<(ostream& out, const Polygon& poly) {
+}
+
+// friend funcion of Polygon class
+ostream& operator<<(ostream& out, const Polygon& poly) {
 	for(int i = 0; i < poly.points.size(); i++) {
 		cout << *poly.points[i] << endl;
 	}
