@@ -87,7 +87,7 @@ C++ provides support to handle exceptions via hierarchy of classes
 - The class exception is:
 	- The base class of the exception classes provided by C++
 	- Contained in the header file:
-		- #include <exception>
+		- #include \<exception\>
 - There are two classes derived from the base exception class
 	- logic_error
 	- runtime_error
