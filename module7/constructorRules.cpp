@@ -19,7 +19,8 @@ class B : public A {
 // Class using parameterized class A constructor
 class C : public A {
 	public:
-		C(int a) : A(a) {
+		C(int a) : A(a) {	// For using separate .h and .cpp files, only include the constructor variable passing in the .cpp file
+								// ie, .h = C(int a);	and .cpp = C::C(int a) : A(a) {}
 			cout << "C" << endl;
 		}
 }
