@@ -32,6 +32,14 @@ AccountChecking::AccountChecking& operator=(const AccountChecking& rhs) {
 	return *this;
 }
 
+// transactionFee functions
+void SetTransactionFee(float fee) {
+	transactionFee = fee;
+}
+float GetTransactionFee() {
+	return transactionFee;
+}
+
 // other methods
 void AccountChecking::Deposit() {
 	float temp;
