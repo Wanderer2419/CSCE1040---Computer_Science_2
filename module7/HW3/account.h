@@ -5,7 +5,7 @@
 using namespace std;
 
 class Account {
-	private:
+	protected:
 		int* ID;
 		string customerName;
 		float acctBalance;
