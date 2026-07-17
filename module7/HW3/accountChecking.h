@@ -13,6 +13,10 @@ class AccountChecking : public Account {
 		// operators
 		AccountChecking& operator=(const AccountChecking& rhs);
 
+		// transactionFee functions
+		void SetTransactionFee(float fee);
+		float GetTransactionFee();
+
 		// other methods
 		void Deposit();
 		void Withdraw();
