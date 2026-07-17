@@ -1,4 +1,4 @@
-#include "AccountChecking.h"
+#include "accountChecking.h"
 #include <iostream>
 #include <iomanip>
 #include <string>
