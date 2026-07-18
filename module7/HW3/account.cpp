@@ -46,7 +46,7 @@ Account& Account::operator+=(Account& source) {
 			cout << "Error: Insufficient balance. Source account has a remaining balance of $" << source.GetAcctBalance() << endl;
 		}
 	} else if (source.GetAcctType() == 2) {
-		if (source.GetAccountThreshold < (source.GetAcctBalance() - temp)) {
+		if (source.GetAccountThreshold() < (source.GetAcctBalance() - temp)) {
 			source.SetAcctBalance(source.GetAcctBalance() - temp);
 			this->acctBalance += temp;
 			cout << "Successfully transfered amount $" << fixed << setprecision(2) << temp << " from source acccoun id " << source.GetID() << " to destination account id " << this->GetID() << endl;
