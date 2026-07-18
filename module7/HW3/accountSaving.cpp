@@ -10,7 +10,7 @@ AccountSaving::AccountSaving() { // default constructor
 	accountType = 2;
 }
 AccountSaving::~AccountSaving() { // destructor
-	delete ID;
+	
 }
 AccountSaving::AccountSaving (const AccountSaving& origObj) { // copy constructor
 	ID = new int;
