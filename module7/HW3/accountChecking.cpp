@@ -7,6 +7,7 @@ using namespace std;
 // constructors
 AccountChecking::AccountChecking() { // default constructor
 	transactionFee = 0.00;
+	accountType = 1;
 }
 AccountChecking::~AccountChecking() { // destructor
 	delete ID;
