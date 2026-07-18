@@ -5,29 +5,69 @@
 using namespace std;
 
 void AccountSystem::AddAccount() {
-	Account input;
+	Account* input;
 	int id;
 	string name;
 	float deposit;
+	float threshold;
+	int type;
 
-	// read from user
-	cout << "Enter account id: ";
-	cin >> id;
-	cin.ignore();
-	if (accts.searchID(id) != -1) {
-		cout << "Error: Account with ID " << id << " already exists." << endl;
-	} else {
-		cout << "Enter customer account name: ";
-		getline(cin, name);
-		cout << "Enter initial deposit amount: $";
-		cin >> deposit;
-		// use mutators
-		input.SetID(id);
-		input.SetCustName(name);
-		input.SetAcctBalance(deposit);
-		// pass input into the accounts
-		accts.addAccount(input);
-		cout << "Added new account id " << id << " with initial balance $" << fixed << setprecision(2) << deposit << endl;
+	cout << "Enter account type (1: checking, 2: saving): ";
+	cin >> type;
+	if(cin.fail()) {
+		cout << "Error with input processing" << endl;
+		cin.clear();
+	}
+	if (type == 1) {
+		input = new AccountChecking;
+		// read from user
+		cout << "Enter account id: ";
+		cin >> id;
+		cin.ignore();
+		if (accts.searchID(id) != -1) {
+			cout << "Error: Account with ID " << id << " already exists." << endl;
+		} else {
+			cout << "Enter customer account name: ";
+			getline(cin, name);
+			cout << "Enter initial deposit amount: $";
+			cin >> deposit;
+			cout << "Enter the transaction fee: $";
+			cin >> threshold;
+			// use mutators
+			input.SetID(id);
+			input.SetCustName(name);
+			input.SetAcctBalance(deposit);
+			input.SetTransactionFee(threshold);
+			input.SetAcctType(type);
+			// pass input into the accounts
+			accts.addAccount(input);
+			cout << "Added new account id " << id << " with initial balance $" << fixed << setprecision(2) << deposit << endl;
+		}
+	} else if (type == 2) {
+		input = new AccountSaving;
+		// read from user
+		cout << "Enter account id: ";
+		cin >> id;
+		cin.ignore();
+		if (accts.searchID(id) != -1) {
+			cout << "Error: Account with ID " << id << " already exists." << endl;
+		} else {
+			cout << "Enter customer account name: ";
+			getline(cin, name);
+			cout << "Enter initial deposit amount: $";
+			cin >> deposit;
+			cout << "Enter the minimum balance: $";
+			cin >> threshold;
+			// use mutators
+			input.SetID(id);
+			input.SetCustName(name);
+			input.SetAcctBalance(deposit);
+			input.SetMinBalance(threshold);
+			input.SetAcctType(type);
+			// pass input into the accounts
+			accts.addAccount(input);
+			cout << "Added new account id " << id << " with initial balance $" << fixed << setprecision(2) << deposit << endl;
+		}
 	}
 }
 
