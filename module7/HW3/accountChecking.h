@@ -15,7 +15,7 @@ class AccountChecking : public Account {
 
 		// transactionFee functions
 		void SetTransactionFee(float fee);
-		float GetTransactionFee();
+		float GetTransactionFee() const;
 
 		// other methods
 		void Deposit() override;
