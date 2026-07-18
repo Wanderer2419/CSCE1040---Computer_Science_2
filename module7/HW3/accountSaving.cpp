@@ -8,6 +8,7 @@ public:
 // constructors
 AccountSaving() { // default constructor
 	minimumBalance = 0.00;
+	accountType = 2;
 }
 ~AccountSaving() { // destructor
 	delete ID;
