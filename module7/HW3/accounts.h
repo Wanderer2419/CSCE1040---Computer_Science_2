@@ -21,7 +21,7 @@ class Accounts {
 		int Size() const;
 
 		// methods
-		void addAccount(const Account& input);
+		void addAccount(Account* input);
 		int searchID(const int id);
 		Account& at(const int i) const;
 };
