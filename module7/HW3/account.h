@@ -9,6 +9,7 @@ class Account {
 		int* ID;
 		string customerName;
 		float acctBalance;
+		int accountType;
 	public:
 		// constructors
 		Account();	// default constructor
@@ -22,15 +23,18 @@ class Account {
 		void SetID(int id);
 		void SetCustName(string name);
 		void SetAcctBalance(float balance);
+		void SetAcctType(int type);
 
 		// accessors
 		int GetID() const;
 		string GetCustName() const;
 		float GetAcctBalance() const;
+		int GetAcctFloat() const;
 
 		// member functions
-		void Deposit();
-		void Withdraw();
+		virtual void Deposit();
+		virtual void Withdraw();
+		virtual float GetAccountThreshold() const = 0;
 };
 
 #endif
