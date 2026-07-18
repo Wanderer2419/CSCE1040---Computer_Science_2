@@ -18,6 +18,7 @@ AccountChecking::AccountChecking (const AccountChecking& origObj) { // copy cons
 	customerName = origObj.GetCustName();
 	acctBalance = origObj.GetAcctBalance();
 	transactionFee = origObj.GetTransactionFee();
+	accountType = 1;
 }
 
 // operators
