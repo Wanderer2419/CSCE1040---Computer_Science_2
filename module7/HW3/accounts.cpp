@@ -13,7 +13,7 @@ Accounts::~Accounts() {	// destructor
 	for (unsigned int i = 0; i < acctsContainer.size(); i++) {
 		delete acctsContainer.at(i);
 	}
-	acctsContainer.clear();
+//	acctsContainer.clear();
 //	delete first;
 	countSize = 0;
 }
@@ -26,6 +26,7 @@ int Accounts::Size() const {
 // methods
 void Accounts::addAccount(Account* input) {
 	acctsContainer.push_back(input);
+	countSize++;
 }
 int Accounts::searchID(const int id) {
 	for (int i = 0; i < countSize; i++) {
