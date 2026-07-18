@@ -14,14 +14,14 @@ class AccountChecking : public Account {
 		AccountChecking& operator=(const AccountChecking& rhs);
 
 		// transactionFee functions
-		void SetTransactionFee(float fee);
+		void SetTransactionFee(float fee) override;
 		float GetTransactionFee() const;
 
 		// other methods
 		void Deposit() override;
 		void Withdraw() override;
 		float GetAccountThreshold() const override;
-		
+
 	private:
 		float transactionFee;
 };
