@@ -106,3 +106,10 @@ void Account::Withdraw() {
 		cout << "Error: failed to withdraw $" << fixed << setprecision(2) << temp << " from account id " << *ID << endl;
 	}
 }
+
+virtual void SetTransactionFee(float fee) {
+	fee = 0;
+}
+virtual void SetMinBalance(float min) {
+	min = 0;
+}
