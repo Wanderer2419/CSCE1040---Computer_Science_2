@@ -34,11 +34,11 @@ void AccountSystem::AddAccount() {
 			cout << "Enter the transaction fee: $";
 			cin >> threshold;
 			// use mutators
-			input.SetID(id);
-			input.SetCustName(name);
-			input.SetAcctBalance(deposit);
-			input.SetTransactionFee(threshold);
-			input.SetAcctType(type);
+			input->SetID(id);
+			input->SetCustName(name);
+			input->SetAcctBalance(deposit);
+			input->SetTransactionFee(threshold);
+			input->SetAcctType(type);
 			// pass input into the accounts
 			accts.addAccount(input);
 			cout << "Added new account id " << id << " with initial balance $" << fixed << setprecision(2) << deposit << endl;
@@ -59,11 +59,11 @@ void AccountSystem::AddAccount() {
 			cout << "Enter the minimum balance: $";
 			cin >> threshold;
 			// use mutators
-			input.SetID(id);
-			input.SetCustName(name);
-			input.SetAcctBalance(deposit);
-			input.SetMinBalance(threshold);
-			input.SetAcctType(type);
+			input->SetID(id);
+			input->SetCustName(name);
+			input->SetAcctBalance(deposit);
+			input->SetMinBalance(threshold);
+			input->SetAcctType(type);
 			// pass input into the accounts
 			accts.addAccount(input);
 			cout << "Added new account id " << id << " with initial balance $" << fixed << setprecision(2) << deposit << endl;
