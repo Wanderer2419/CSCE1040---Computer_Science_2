@@ -39,7 +39,7 @@ AccountChecking::AccountChecking& operator=(const AccountChecking& rhs) {
 void AccountChecking::SetTransactionFee(float fee) {
 	transactionFee = fee;
 }
-float AccountChecking::GetTransactionFee() {
+float AccountChecking::GetTransactionFee() const {
 	return transactionFee;
 }
 
