@@ -18,6 +18,7 @@ AccountSaving (const AccountSaving& origObj) { // copy constructor
 	customerName = origObj.GetCustName();
 	acctBalance = origObj.GetAcctBalance();
 	transactionFee = origObj.GetMinBalance();
+	accountType = 2;
 }
 // operators
 AccountSaving& operator=(const AccountSaving& rhs) {
