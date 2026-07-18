@@ -10,6 +10,10 @@ Accounts::Accounts() {	//default constructor
 	countSize = 0;
 }
 Accounts::~Accounts() {	// destructor
+	for (unsigned int i = 0; i < acctsContainer; i++) {
+		delete acctsContainer.at(i);
+	}
+	acctsContainer.clear();
 //	delete first;
 	countSize = 0;
 }
