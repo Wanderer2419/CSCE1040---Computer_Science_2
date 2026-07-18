@@ -29,7 +29,7 @@ class Account {
 		int GetID() const;
 		string GetCustName() const;
 		float GetAcctBalance() const;
-		int GetAcctFloat() const;
+		int GetAcctType() const;
 
 		// member functions
 		virtual void Deposit();
