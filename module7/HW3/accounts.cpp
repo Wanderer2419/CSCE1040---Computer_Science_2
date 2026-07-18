@@ -24,7 +24,7 @@ int Accounts::Size() const {
 }
 
 // methods
-void Accounts::addAccount(const Account& input) {
+void Accounts::addAccount(Account* input) {
 	acctsContainer.push_back(input);
 }
 int Accounts::searchID(const int id) {
