@@ -10,7 +10,7 @@ AccountChecking::AccountChecking() { // default constructor
 	accountType = 1;
 }
 AccountChecking::~AccountChecking() { // destructor
-	delete ID;
+	
 }
 AccountChecking::AccountChecking (const AccountChecking& origObj) { // copy constructor
 	ID = new int;
