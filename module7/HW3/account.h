@@ -13,7 +13,7 @@ class Account {
 	public:
 		// constructors
 		Account();	// default constructor
-		~Account();	// destructor
+		virtual ~Account();	// destructor
 		Account(const Account& origObj);
 		// operators
 		Account& operator=(const Account& rhs);
