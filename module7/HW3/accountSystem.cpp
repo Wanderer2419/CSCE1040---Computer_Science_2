@@ -68,6 +68,8 @@ void AccountSystem::AddAccount() {
 			accts.addAccount(input);
 			cout << "Added new account id " << id << " with initial balance $" << fixed << setprecision(2) << deposit << endl;
 		}
+	} else {
+		cout << "Error: Invalid account type. Account type (1: checking, 2 saving)" << endl;
 	}
 }
 
@@ -131,13 +133,13 @@ void AccountSystem::PrintAll() const {
 				cout << "| " << setw(4) << left << accts.at(i).GetID() << 
 				" | " << setw(30) << left << accts.at(i).GetCustName() << 
 				" | $ " << fixed << setprecision(2) << setw(13) << right << accts.at(i).GetAcctBalance() <<
-				" | Checking   | $" << setw(11) << right << accts.at(i).GetAccountThreshold() << " |" << endl;
+				" | Checking   | $" << setw(12) << right << accts.at(i).GetAccountThreshold() << " |" << endl;
 				cout << "+======+================================+=================+============+===============+" << endl;
 			} else if (accts.at(i).GetAcctType() == 2) {
 				cout << "| " << setw(4) << left << accts.at(i).GetID() << 
 				" | " << setw(30) << left << accts.at(i).GetCustName() << 
 				" | $ " << fixed << setprecision(2) << setw(13) << right << accts.at(i).GetAcctBalance() <<
-				" | Saving     | $" << setw(11) << right << accts.at(i).GetAccountThreshold() << " |" << endl;
+				" | Saving     | $" << setw(12) << right << accts.at(i).GetAccountThreshold() << " |" << endl;
 				cout << "+======+================================+=================+============+===============+" << endl;
 			}
 		}
