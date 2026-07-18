@@ -22,7 +22,7 @@ AccountChecking::AccountChecking (const AccountChecking& origObj) { // copy cons
 }
 
 // operators
-AccountChecking::AccountChecking& operator=(const AccountChecking& rhs) {
+AccountChecking& AccountChecking::operator=(const AccountChecking& rhs) {
 	if (this != &rhs) {
 		delete ID;
 		ID = new int;
