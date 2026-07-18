@@ -18,8 +18,8 @@ class AccountSaving : public Account {
 		float GetMinBalance() const;
 
 		// other methods
-		void Withdraw();
-		float GetAccountThreshold() const;
+		void Withdraw() override;
+		float GetAccountThreshold() const override;
 	private:
 		float minimumBalance;
 };
