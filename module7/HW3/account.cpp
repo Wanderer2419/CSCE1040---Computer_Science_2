@@ -9,6 +9,7 @@ Account::Account() {	// default constructor
 	*ID = -1;
 	customerName = "";
 	acctBalance = 0.0;
+	accountType = 0;
 }
 Account::~Account() {	// destructor
 	delete ID;
@@ -18,6 +19,7 @@ Account::Account(const Account& origObj) {	// copy constructor
 	*ID = origObj.GetID();
 	customerName = origObj.GetCustName();
 	acctBalance = origObj.GetAcctBalance();
+	accountType = 0;
 }
 
 // operators
@@ -35,12 +37,22 @@ Account& Account::operator+=(Account& source) {
 	float temp;
 	cout << "Enter the transfer amount: $";
 	cin >> temp;
-	if (temp < source.GetAcctBalance()) {
-		source.SetAcctBalance(source.GetAcctBalance() - temp);
-		acctBalance += temp;
-		cout << "Successfully transfered amount $" << fixed << setprecision(2) << temp << " from source acccoun id " << source.GetID() << " to destination account id " << this->GetID() << endl;
-	} else {
-		cout << "Error: Insufficient balance. Source account has a remaining balance of $" << source.GetAcctBalance() << endl;
+	if (source.GetAcctType() == 1) {
+		if (temp < source.GetAcctBalance()) {
+			source.SetAcctBalance(source.GetAcctBalance() - temp);
+			this->acctBalance += temp;
+			cout << "Successfully transfered amount $" << fixed << setprecision(2) << temp << " from source acccoun id " << source.GetID() << " to destination account id " << this->GetID() << endl;
+		} else {
+			cout << "Error: Insufficient balance. Source account has a remaining balance of $" << source.GetAcctBalance() << endl;
+		}
+	} else if (source.GetAcctType() == 2) {
+		if (source.GetAccountThreshold < (source.GetAcctBalance() - temp)) {
+			source.SetAcctBalance(source.GetAcctBalance() - temp);
+			this->acctBalance += temp;
+			cout << "Successfully transfered amount $" << fixed << setprecision(2) << temp << " from source acccoun id " << source.GetID() << " to destination account id " << this->GetID() << endl;
+		} else {
+			cout << "Error: Insufficient balance. Source account has a remaining balance of $" << source.GetAcctBalance() << endl;
+		}
 	}
 	return *this;
 }
@@ -57,6 +69,9 @@ void Account::SetCustName(string name) {
 void Account::SetAcctBalance(float balance) {
 	acctBalance = balance;
 }
+void Account::SetAcctType(int type) {
+	accountType = type;
+}
 
 // accessors
 int Account::GetID() const {
@@ -67,6 +82,9 @@ string Account::GetCustName() const {
 }
 float Account::GetAcctBalance() const {
 	return acctBalance;
+}
+int Account::GetAcctType() const {
+	return accountType;
 }
 
 // other member functions
