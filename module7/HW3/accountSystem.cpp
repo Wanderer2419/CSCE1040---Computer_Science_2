@@ -123,14 +123,23 @@ void AccountSystem::Transfer() {
 }
 void AccountSystem::PrintAll() const {
 	if (accts.Size() > 0) {
-		cout << "+=========================================================+" << endl;
-		cout << "| Acct | Customer Account Name          | Balance         |" << endl;
-		cout << "+=========================================================+" << endl;
+		cout << "+======+================================+=================+============+===============+" << endl;
+		cout << "| Acct | Customer Account Name          | Balance         | Type       | Fee/Min       |" << endl;
+		cout << "+======+================================+=================+============+===============+" << endl;
 		for (int i = 0; i < accts.Size(); i++) {
-			cout << "| " << setw(4) << left << accts.at(i).GetID() << 
-			" | " << setw(30) << left << accts.at(i).GetCustName() << 
-			" | $ " << fixed << setprecision(2) << setw(13) << right << accts.at(i).GetAcctBalance() << " |" << endl;
-			cout << "+=========================================================+" << endl;
+			if (accts.at(i).GetAcctType() == 1) {
+				cout << "| " << setw(4) << left << accts.at(i).GetID() << 
+				" | " << setw(30) << left << accts.at(i).GetCustName() << 
+				" | $ " << fixed << setprecision(2) << setw(13) << right << accts.at(i).GetAcctBalance() <<
+				" | Checking   | $" << setw(11) << right << accts.at(i).GetAccountThreshold() << " |" << endl;
+				cout << "+======+================================+=================+============+===============+" << endl;
+			} else if (accts.at(i).GetAcctType() == 2) {
+				cout << "| " << setw(4) << left << accts.at(i).GetID() << 
+				" | " << setw(30) << left << accts.at(i).GetCustName() << 
+				" | $ " << fixed << setprecision(2) << setw(13) << right << accts.at(i).GetAcctBalance() <<
+				" | Saving     | $" << setw(11) << right << accts.at(i).GetAccountThreshold() << " |" << endl;
+				cout << "+======+================================+=================+============+===============+" << endl;
+			}
 		}
 	} else {
 		cout << "Empty account list." << endl;
