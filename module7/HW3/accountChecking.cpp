@@ -30,6 +30,7 @@ AccountChecking::AccountChecking& operator=(const AccountChecking& rhs) {
 		customerName = rhs.GetCustName();
 		acctBalance = rhs.GetAcctBalance();
 		transactionFee = origObj.GetTransactionFee();
+		accountType = 1;
 	}
 	return *this;
 }
