@@ -18,9 +18,9 @@ class AccountChecking : public Account {
 		float GetTransactionFee();
 
 		// other methods
-		void Deposit();
-		void Withdraw();
-		float GetAccountThreshold() const;
+		void Deposit() override;
+		void Withdraw() override;
+		float GetAccountThreshold() const override;
 		
 	private:
 		float transactionFee;
