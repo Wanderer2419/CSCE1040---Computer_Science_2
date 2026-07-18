@@ -29,6 +29,7 @@ AccountSaving::AccountSaving& operator=(const AccountSaving& rhs) {
 		customerName = rhs.GetCustName();
 		acctBalance = rhs.GetAcctBalance();
 		minimumBalance = origObj.GetMinBalance();
+		accountType = 2;
 	}
 	return *this;
 }
