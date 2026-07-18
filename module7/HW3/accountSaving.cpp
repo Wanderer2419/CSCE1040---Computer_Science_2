@@ -17,18 +17,18 @@ AccountSaving::AccountSaving (const AccountSaving& origObj) { // copy constructo
 	*ID = origObj.GetID();
 	customerName = origObj.GetCustName();
 	acctBalance = origObj.GetAcctBalance();
-	transactionFee = origObj.GetMinBalance();
+	minimumBalance = origObj.GetMinBalance();
 	accountType = 2;
 }
 // operators
-AccountSaving::AccountSaving& operator=(const AccountSaving& rhs) {
+AccountSaving& AccountSaving::operator=(const AccountSaving& rhs) {
 	if (this != &rhs) {
 		delete ID;
 		ID = new int;
 		*ID = rhs.GetID();
 		customerName = rhs.GetCustName();
 		acctBalance = rhs.GetAcctBalance();
-		minimumBalance = origObj.GetMinBalance();
+		minimumBalance = rhs.GetMinBalance();
 		accountType = 2;
 	}
 	return *this;
