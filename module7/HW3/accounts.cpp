@@ -36,5 +36,5 @@ int Accounts::searchID(const int id) {
 	return -1;	// if index = -1, then the id was not found in the container
 }
 Account& Accounts::at(const int i) const {
-	return (acctsContainer.at(i));
+	return (*acctsContainer.at(i));
 }
