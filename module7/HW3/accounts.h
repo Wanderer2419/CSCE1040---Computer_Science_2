@@ -1,19 +1,21 @@
 #ifndef ACCOUNTS_H
 #define ACCOUNTS_H
 
-#include "account.h"
+#include "accountChecking.h"
+#include "accountSaving.h"
+#include <vector>
+#include <algorithm>
 using namespace std;
 
 class Accounts {
 	private:
-		const int SIZE = 1000;
 		Account* first;
 		int countSize;
-		Account* acctsArray;
+		vector<Account *> acctsContainer;
 	public:
 		// constructors
-		Accounts();	//default constructor
-		~Accounts();	// destructor
+		Accounts(); //default constructor
+		~Accounts(); // destructor
 
 		// accessor
 		int Size() const;
