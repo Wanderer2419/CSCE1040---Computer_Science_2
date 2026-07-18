@@ -49,7 +49,7 @@ void AccountChecking::Deposit() {
 	cout << "Enter the deposit amount: $";
 	cin >> temp;
 	acctBalance += (temp - transactionFee);
-	cout << "Deposited $" << fixed << setprecision(2) << (temp - transactionFee) << " into account id" << *ID << endl;
+	cout << "Deposited $" << fixed << setprecision(2) << (temp - transactionFee) << " into account id " << *ID << endl;
 }
 void AccountChecking::Withdraw() {
 	float temp;
