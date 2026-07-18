@@ -35,6 +35,8 @@ class Account {
 		virtual void Deposit();
 		virtual void Withdraw();
 		virtual float GetAccountThreshold() const = 0;
+		virtual void SetTransactionFee() const = 0;
+		virtual void SetMinimumBalance() const = 0;
 };
 
 #endif
