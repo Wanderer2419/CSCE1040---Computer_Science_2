@@ -5,14 +5,14 @@
 using namespace std;
 
 // constructors
-AccountSaving() { // default constructor
+AccountSaving::AccountSaving() { // default constructor
 	minimumBalance = 0.00;
 	accountType = 2;
 }
-~AccountSaving() { // destructor
+AccountSaving::~AccountSaving() { // destructor
 	delete ID;
 }
-AccountSaving (const AccountSaving& origObj) { // copy constructor
+AccountSaving::AccountSaving (const AccountSaving& origObj) { // copy constructor
 	ID = new int;
 	*ID = origObj.GetID();
 	customerName = origObj.GetCustName();
@@ -21,7 +21,7 @@ AccountSaving (const AccountSaving& origObj) { // copy constructor
 	accountType = 2;
 }
 // operators
-AccountSaving& operator=(const AccountSaving& rhs) {
+AccountSaving::AccountSaving& operator=(const AccountSaving& rhs) {
 	if (this != &rhs) {
 		delete ID;
 		ID = new int;
@@ -33,14 +33,14 @@ AccountSaving& operator=(const AccountSaving& rhs) {
 	return *this;
 }
 // minimumBalance functions
-void SetMinBalance(float min) {
+void AccountSaving::SetMinBalance(float min) {
 	minimumBalance = min;
 }
-float GetMinBalance() const {
+float AccountSaving::GetMinBalance() const {
 	return minimumBalance;
 }
 // other methods
-void Withdraw() {
+void AccountSaving::Withdraw() {
 	float temp;
 	cout << "Enter the withdrawal amount: $";
 	cin >> temp;
@@ -51,7 +51,6 @@ void Withdraw() {
 		cout << "Error: failed to withdraw $" << fixed << setprecision(2) << temp << " from account id " << *ID << endl;
 	}
 }
-float GetAccountThreshold() const {
+float AccountSaving::GetAccountThreshold() const {
 	return minimumBalance;
 }
-// float minimumBalance;
