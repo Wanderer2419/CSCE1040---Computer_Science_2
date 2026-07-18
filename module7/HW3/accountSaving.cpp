@@ -4,7 +4,6 @@
 #include <string>
 using namespace std;
 
-public:
 // constructors
 AccountSaving() { // default constructor
 	minimumBalance = 0.00;
