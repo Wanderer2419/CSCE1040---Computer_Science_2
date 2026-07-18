@@ -14,7 +14,7 @@ class AccountSaving : public Account {
 		AccountSaving& operator=(const AccountSaving& rhs);
 
 		// minimumBalance functions
-		void SetMinBalance(float min);
+		void SetMinBalance(float min) override;
 		float GetMinBalance() const;
 
 		// other methods
